@@ -1,3 +1,2 @@
 #!/bin/bash
 for file in "$(pwd)"/*.html; do filename=$(basename "$file"); dst_file="$(dirname "$(pwd)")/$filename"; [ -f "$dst_file" ] && ([ "$file" -nt "$dst_file" ] && cp "$file" "$(dirname "$(pwd)")") || true) || (cp "$file" "$(dirname "$(pwd)")"); done
-
